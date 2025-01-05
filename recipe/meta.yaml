@@ -1,5 +1,5 @@
 {% set name = "pymc-extras" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pymc_extras-{{ version }}.tar.gz
-  sha256: fdd60132e2bb91fcdaa7745b2aa4e07cd5f2fa272eb3524b79f993dcf0bf1123
+  sha256: a80c529619aafd941ca2ae8a671cafa4c5963aefa400cc3b0fffa533db3613cb
 
 build:
   noarch: python
