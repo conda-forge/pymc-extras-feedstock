@@ -1,5 +1,5 @@
 {% set name = "pymc-extras" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pymc_extras-{{ version }}.tar.gz
-  sha256: 2cfcfe4c935cf17c9fbbce0596d5687f33b514629bbedac5b752adb70b59e726
+  sha256: f136a91774632779e473738776e7c22d3686b5eff07fae9d36cde2e9a1a9bfcd
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - pymc >=5.20
+    - pymc >=5.21.1
     - scikit-learn
     - better-optimize
 
