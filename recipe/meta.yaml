@@ -1,6 +1,6 @@
 {% set name = "pymc-extras" %}
-{% set version = "0.2.6" %}
-{% set python_min = "3.10" %}
+{% set version = "0.2.7" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pymc_extras-{{ version }}.tar.gz
-  sha256: 92bd16deb63cbb4f4886944ea1a1cd52fce5f14897db6e04ea3b7b6058f57c75
+  sha256: ca4c566b7bea534d680983728dd5d60e591356e8b1832c3731b70b652232246b
 
 build:
   noarch: python
@@ -26,6 +26,8 @@ requirements:
     - pymc >=5.21.1
     - scikit-learn
     - better-optimize >=0.1.2
+    - pydantic >=2.0.0
+    - preliz
 
 test:
   imports:
