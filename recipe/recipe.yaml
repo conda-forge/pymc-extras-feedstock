@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pymc-extras
-  version: "0.8.0"
+  version: "0.9.1"
   python_min: "3.11"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pymc_extras-${{ version }}.tar.gz
-  sha256: 925a2507da51e03d75a5804639e6252beb2c957df57e5fc6764c9793d42f499a
+  sha256: 1078528c06f1f7fa543194452463353f82def664c7080f18c4c24e5b117e9f2b
 
 build:
   number: 0
