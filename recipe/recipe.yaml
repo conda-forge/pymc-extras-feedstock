@@ -3,7 +3,7 @@ schema_version: 1
 context:
   name: pymc-extras
   version: "0.11.0"
-  python_min: "3.11"
+  python_min: "3.12"
 
 package:
   name: ${{ name|lower }}
@@ -26,12 +26,11 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - pymc >=5.28.1
-    - pytensor >=2.38.1
-    - scikit-learn
-    - better-optimize >=0.1.5
+    - pymc >=6.0,<7.0
+    - arviz >=1.1
+    - better-optimize >=0.4.1,<1.0
     - pydantic >=2.0.0
-    - preliz >=0.20.0
+    - preliz >=0.25.0
 
 tests:
   - python:
