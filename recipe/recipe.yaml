@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: pymc-extras
-  version: "0.12.0"
-  python_min: "3.12"
+  version: 0.12.1
+  python_min: '3.12'
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pymc_extras-${{ version }}.tar.gz
-  sha256: 2288a17cd2b32a42de00ab4511e4d211cf1808ed3afa1ee745f5aecd422d47af
+  sha256: c128c8217fc956bdc325026f13ba097a48d51c9dab489a7c489e3e04d41a4ebf
 
 build:
   number: 0
@@ -28,10 +28,9 @@ requirements:
     - python >=${{ python_min }}
     - pymc >=6.0,<7.0
     - arviz >=1.1
-    - better-optimize >=0.4.1,<1.0
+    - better-optimize >=0.4.2,<1.0
     - pydantic >=2.0.0
-    - preliz >=0.25.0
-
+    - preliz >=0.26.0,<0.27.0
 tests:
   - python:
       imports:
