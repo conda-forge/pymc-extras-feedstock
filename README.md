@@ -40,31 +40,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pymc-extras` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install pymc-extras
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install pymc-extras
 ```
 
-It is possible to list all of the versions of `pymc-extras` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add pymc-extras
+# for installing globally
+pixi global install pymc-extras
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `pymc-extras` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search pymc-extras --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search pymc-extras --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search pymc-extras --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -76,6 +118,8 @@ mamba repoquery whoneeds pymc-extras --channel conda-forge
 # List dependencies of `pymc-extras`:
 mamba repoquery depends pymc-extras --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
