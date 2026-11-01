@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pymc-extras
-  version: "0.15.1"
+  version: "0.16.0"
   python_min: '3.12'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pymc_extras-${{ version }}.tar.gz
-  sha256: bd08ce9163905852b558d18be13551e7e5c4d9041dfd09a107a87e9a64846ba9
+  sha256: c69b7e94baa88ee97c43f6c438d2622b8748d1f0c7b004e25fdaf0ecb6e858a6
 
 build:
   number: 0
@@ -26,12 +26,14 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - pymc >=6.3.0,<6.4
+    - pymc >=6.4.0,<6.5
+    - pytensor >=3.3.6,<3.4
     - arviz >=1.2,<2.0
-    - better-optimize >=0.4.2,<1.0
+    - better-optimize >=0.5.1,<1.0
+    - pandas >=2.2,<3.2
     - pydantic >=2.0.0,<3.0
     - preliz >=0.27.0,<0.29.0
-    - pytensor >=3.3.0,<3.4
+    - pytensor-ml >=0.3.0,<0.4
 tests:
   - python:
       imports:
